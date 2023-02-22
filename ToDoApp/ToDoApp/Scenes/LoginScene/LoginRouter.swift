@@ -12,9 +12,9 @@ protocol IRouterLogin {
 }
 
 final class LoginRouter: IRouterLogin {
-	private weak var viewController: ILoginViewController?
+	private weak var viewController: UIViewController?
 	
-	init(viewController: ILoginViewController) {
+	init(viewController: UIViewController) {
 		self.viewController = viewController
 	}
 	
@@ -23,10 +23,8 @@ final class LoginRouter: IRouterLogin {
 		navigateToSomewhere(source: viewController!, destination: destination)
 	}
 	
-	func navigateToSomewhere(source: ILoginViewController, destination: UIViewController) {
-		if let source = source as? UIViewController {
-			source.show(destination, sender: nil)
-		}
+	private func navigateToSomewhere(source: UIViewController, destination: UIViewController) {
+		source.show(destination, sender: nil)
 	}
 	
 	private func assemblyToDoList() -> UIViewController {

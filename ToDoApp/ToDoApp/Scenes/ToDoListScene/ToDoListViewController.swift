@@ -63,7 +63,7 @@ class ToDoListViewController: UITableViewController {
 	}
 	
 	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-		interactor?.taskSelected(request: ToDoListModel.Request(indexPath: indexPath))
+		interactor?.didTaskSelected(request: ToDoListModel.Request(indexPath: indexPath))
 	}
 }
 

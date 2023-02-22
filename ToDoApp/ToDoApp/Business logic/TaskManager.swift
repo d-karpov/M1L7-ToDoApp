@@ -8,18 +8,6 @@
 import Foundation
 
 /// Класс реализующий Менеджер задач, соответствует протоколу ITaskManager
-///
-/// Содержит методы:
-///
-/// func allTasks() -> [Task] - получить все задачи
-///
-/// func allCompletedTasks() -> [Task] - получить завершенные задачи
-///
-/// func allNotCompletedTasks() -> [Task] - получить не завершенные задачи
-///
-/// func addTask(_ task: Task) - добавить задачу
-///
-/// func deleteTask(_ task: Task) - удалить задачу
 final class TaskManager {
 	private var tasks: [Task]
 	

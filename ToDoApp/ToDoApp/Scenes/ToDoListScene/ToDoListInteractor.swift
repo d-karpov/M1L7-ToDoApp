@@ -9,7 +9,7 @@ import Foundation
 
 protocol IToDoListInteractor {
 	func viewIsReady()
-	func taskSelected(request: ToDoListModel.Request)
+	func didTaskSelected(request: ToDoListModel.Request)
 }
 
 final class ToDoListInteractor: IToDoListInteractor {
@@ -21,7 +21,7 @@ final class ToDoListInteractor: IToDoListInteractor {
 		self.presenter = presenter
 	}
 	
-	func taskSelected(request: ToDoListModel.Request) {
+	func didTaskSelected(request: ToDoListModel.Request) {
 		changeStatusOfTask(request.indexPath)
 		viewIsReady()
 	}
